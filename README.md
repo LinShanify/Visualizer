@@ -130,7 +130,7 @@ for i in range(5):
     tensor4D=torch.cat((tensor4D,tensor.unsqueeze(0)),0)
 vis.img('MultiImage',tensor4D, nrow=3)
 ```
-![](https://github.com/LinShanify/Visualizer/blob/master/imgs/MultiImage.png?raw=true)
+![](https://github.com/LinShanify/Visualizer/blob/master/imgs/MultiImage.jpg?raw=true)
 ___
 ### **Check Visdom Connection**: `check_connection`
 
