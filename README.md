@@ -35,13 +35,14 @@ put the `vis.plot` inside the loop
 for i in range(0,10,1):
     vis.plot('Single Value Plot Step 1',i/10)
 ```
-![](https://github.com/LinShanify/HeatMap/blob/master/heatmap_result_1.png?raw=true)
+![](https://github.com/LinShanify/Visualizer/blob/master/imgs/SingleValuePlot1.png?raw=true)
 
 ```python
 # simple plot with logging step 10
 for i in range(0,10,1):
     vis.plot('Single Value Plot Step 10',i/10, 10)
 ```
+![](https://github.com/LinShanify/Visualizer/blob/master/imgs/SingleValuePlot10.png?raw=true)
 
 ### **Multi-Value Plots into Separate Graphs `plot_all`:**  2 parameters:
 1. **dict**: dictionary contains each name and value
@@ -58,6 +59,7 @@ for i in range(0,10,1):
             'Loss':1-i/10}
     vis.plot_all(loss)
 ```
+![](https://github.com/LinShanify/Visualizer/blob/master/imgs/Acc.png?raw=true) ![](https://github.com/LinShanify/Visualizer/blob/master/imgs/Loss.png?raw=true)
 
 ### **Multi-Value Plots in One Single Graph `plot_combine`:**  3 parameters:
 1. **name**: name for the graph *(string)*
@@ -75,7 +77,7 @@ for i in range(0,10,1):
             'Loss':1-i/10}
     vis.plot_combine('Combine Plot',loss)
 ```
-
+![](https://github.com/LinShanify/Visualizer/blob/master/imgs/CombinePlot.png?raw=true)
 ___
 ## Logging String in Pytorch
 ### **Text Log `log`:** 3 parameters:
@@ -89,7 +91,7 @@ for i in range(0,10,1):
             'Loss':1-i/10}
     vis.log(loss)
 ```
-
+![](https://github.com/LinShanify/Visualizer/blob/master/imgs/Log.png?raw=true)
 ___
 ## Display Pytorch Tensor as Images
 ### **Image Display `img`:**  2 parameters:
@@ -116,7 +118,7 @@ arr = np.array(img).transpose((2, 0, 1))
 tensor = torch.from_numpy(arr)
 vis.img('SingleImage',tensor)
 ```
-
+![](https://github.com/LinShanify/Visualizer/blob/master/imgs/Lenna.png?raw=true)
 
 ```python
 #Plot Multi Images (4D tensor)
@@ -128,7 +130,7 @@ for i in range(5):
     tensor4D=torch.cat((tensor4D,tensor.unsqueeze(0)),0)
 vis.img('MultiImage',tensor4D, nrow=3)
 ```
-
+![](https://github.com/LinShanify/Visualizer/blob/master/imgs/MultiImage.png?raw=true)
 ___
 ### **Check Visdom Connection**: `check_connection`
 
@@ -141,5 +143,7 @@ vis.check_connection()
 
 
     True
+    
 
 
+![](https://github.com/LinShanify/Visualizer/blob/master/imgs/demo.png?raw=true)
